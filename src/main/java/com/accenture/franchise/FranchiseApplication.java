@@ -1,13 +1,13 @@
-package com.accenture.franchise.domain;
+package com.accenture.franchise;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DomainApplication {
+public class FranchiseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DomainApplication.class, args);
+		SpringApplication.run(FranchiseApplication.class, args);
 	}
 
 }

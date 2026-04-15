@@ -5,7 +5,7 @@ API RESTful reactiva para la gestión de franquicias, sucursales y el control de
 ## 🚀 Tecnologías y Arquitectura
 
 * **Lenguaje:** Java 17
-* **Framework:** Spring Boot 3.4.x (Spring WebFlux)
+* **Framework:** Spring Boot 3.5.13 (Spring WebFlux)
 * **Persistencia:** MongoDB (Spring Data Reactive MongoDB)
 * **Arquitectura:** Clean Architecture (Domain, Application, Infrastructure)
 * **Documentación:** SpringDoc OpenAPI (Swagger UI)
@@ -14,14 +14,14 @@ API RESTful reactiva para la gestión de franquicias, sucursales y el control de
 
 ### 🎯 Cumplimiento de Requerimientos y Puntos Extra
 
-✅ Aplicación de programación reactiva (WebFlux + Reactive Mongo).
-✅ Estructura basada en Clean Architecture (Aislamiento del dominio y uso de puertos/adaptadores).
-✅ Inclusión de pruebas unitarias (Testing reactivo de flujos y controladores).
-✅ Implementación de DTOs y Global Exception Handler (`@ControllerAdvice`) para respuestas limpias.
-🌟 **Plus:** Aplicación empaquetada con Docker multi-stage.
-🌟 **Plus:** Endpoints para actualizar nombres (Franquicias, Sucursales, Productos) implementados.
-🌟 **Plus:** Persistencia de datos e infraestructura aprovisionada como código (Terraform).
-🌟 **Plus:** Solución completamente desplegada en la nube (AWS).
+* ✅ Aplicación de programación reactiva (WebFlux + Reactive Mongo).
+* ✅ Estructura basada en Clean Architecture (Aislamiento del dominio y uso de puertos/adaptadores).
+* ✅ Inclusión de pruebas unitarias (Testing reactivo de flujos y controladores).
+* ✅ Implementación de DTOs y Global Exception Handler (`@ControllerAdvice`) para respuestas limpias.
+* 🌟 **Plus:** Aplicación empaquetada con Docker multi-stage.
+* 🌟 **Plus:** Endpoints para actualizar nombres (Franquicias, Sucursales, Productos) implementados.
+* 🌟 **Plus:** Persistencia de datos e infraestructura aprovisionada como código (Terraform).
+* 🌟 **Plus:** Solución completamente desplegada en la nube (AWS).
 
 ---
 

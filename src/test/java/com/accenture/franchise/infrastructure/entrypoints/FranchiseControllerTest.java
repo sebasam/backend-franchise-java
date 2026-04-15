@@ -2,6 +2,7 @@ package com.accenture.franchise.infrastructure.entrypoints;
 
 import com.accenture.franchise.application.services.FranchiseService;
 import com.accenture.franchise.domain.model.Franchise;
+import com.accenture.franchise.infrastructure.entrypoints.dto.FranchiseRequest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
@@ -24,7 +25,7 @@ class FranchiseControllerTest {
 
     @Test
     void shouldReturnCreatedFranchise() {
-        Franchise requestBody = new Franchise(null, "Global Tech");
+        FranchiseRequest requestBody = new FranchiseRequest("Global Tech");
         Franchise responseBody = new Franchise("1", "Global Tech");
 
         when(franchiseService.createFranchise(any(Franchise.class))).thenReturn(Mono.just(responseBody));
@@ -42,7 +43,7 @@ class FranchiseControllerTest {
 
     @Test
     void shouldReturnInternalServerErrorWhenServiceFails() {
-        Franchise requestBody = new Franchise(null, "Error Tech");
+        FranchiseRequest requestBody = new FranchiseRequest("Error Tech");
 
         when(franchiseService.createFranchise(any(Franchise.class)))
                 .thenReturn(Mono.error(new RuntimeException("Unexpected error")));

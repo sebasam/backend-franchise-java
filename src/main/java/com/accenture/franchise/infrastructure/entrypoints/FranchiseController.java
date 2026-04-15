@@ -19,8 +19,8 @@ public class FranchiseController {
 
     @PostMapping
     @Operation(summary = "Agregar una nueva franquicia")
-    public Mono<Franchise> createFranchise(@RequestBody Franchise franchise) {
-        return service.createFranchise(franchise);
+    public Mono<Franchise> createFranchise(@RequestBody com.accenture.franchise.infrastructure.entrypoints.dto.FranchiseRequest request) {
+        return service.createFranchise(new Franchise(null, request.name()));
     }
 
     @PatchMapping("/{id}/name")
@@ -31,8 +31,8 @@ public class FranchiseController {
 
     @PostMapping("/{franchiseId}/branches")
     @Operation(summary = "Agregar una nueva sucursal a la franquicia")
-    public Mono<Branch> createBranch(@PathVariable String franchiseId, @RequestBody Branch branch) {
-        return service.createBranch(new Branch(null, branch.name(), franchiseId));
+    public Mono<Branch> createBranch(@PathVariable String franchiseId, @RequestBody com.accenture.franchise.infrastructure.entrypoints.dto.BranchRequest request) {
+        return service.createBranch(new Branch(null, request.name(), franchiseId));
     }
 
     @PatchMapping("/branches/{branchId}/name")
@@ -43,8 +43,8 @@ public class FranchiseController {
 
     @PostMapping("/branches/{branchId}/products")
     @Operation(summary = "Agregar un nuevo producto a la sucursal")
-    public Mono<Product> createProduct(@PathVariable String branchId, @RequestBody Product product) {
-        return service.createProduct(new Product(null, product.name(), product.stock(), branchId));
+    public Mono<Product> createProduct(@PathVariable String branchId, @RequestBody com.accenture.franchise.infrastructure.entrypoints.dto.ProductRequest request) {
+        return service.createProduct(new Product(null, request.name(), request.stock(), branchId));
     }
 
     @DeleteMapping("/branches/{branchId}/products/{productId}")

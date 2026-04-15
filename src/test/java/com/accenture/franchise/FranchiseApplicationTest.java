@@ -1,10 +1,10 @@
-package com.accenture.franchise.domain;
+package com.accenture.franchise;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DomainApplicationTests {
+class FranchiseApplicationTest {
 
 	@Test
 	void contextLoads() {
